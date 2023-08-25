@@ -179,15 +179,28 @@ body {
 .panel__element {
   padding: 10px 24px;}
 
-.header-panel__button{
+.header-panel__button {
   display: flex;
-  align-self: center; 
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1;
+  background-color: #ffffff;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
 }
+
+.header-panel__button:hover {
+    background-color: #bea5a5; 
+}
+
 .header-panel__button--end{
   display: flex;
   align-self: center; 
   margin-left: auto;
 }
+
 .nav__header {
   font-weight: bold;
   margin-left: 16px;
@@ -252,7 +265,7 @@ body {
 .nav__button {
   text-decoration: none;
   font-weight: 400;
-  color: #7e7e82;
+  color: #7e7e82; 
   font-size: 16px;
   display: block;
   padding: 9px 22px;
@@ -270,7 +283,21 @@ body {
   cursor: pointer;
   transition: color 0.6s ease;
 }
+.nav__button-modifier:hover{
+  color: #84868d;
+}
+.nav__button-modifier:hover::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 4px;
+  height: 32px;
+  background-color: #41f6d7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #84868d;
 
+}
 .nav__button--active {
   background: #ffffff;
   border: 2px solid #b8ffec;
